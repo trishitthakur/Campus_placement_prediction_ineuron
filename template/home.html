@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trishit's Campus Placement Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: skyblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="https://img.collegedekhocdn.com/media/img/news/Placement_Hoax.png" alt="College Placement Picture">
+    <h1>Trishit's Campus Placement Prediction</h1>
+</div>
+
+<div class="container">
+    <form action="/send" name="send_data" method="post">
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ssc_p">Secondary Education Percentage - 10th Grade</label>
+            <input type="text" name="ssc_p" placeholder="10th grade in percentage">
+        </div>
+
+        <div class="form-group">
+            <label for="hsc_p">Higher Secondary Education Percentage - 12th Grade</label>
+            <input type="text" name="hsc_p" placeholder="12th Percentage">
+        </div>
+
+        <div class="form-group">
+            <label for="hsc_s1">Specialization in Higher Secondary Education</label>
+            <select name="hsc_s1">
+                <option value="Commerce">Commerce</option>
+                <option value="Science">Science</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="degree_p">Degree Percentage</label>
+            <input type="text" name="degree_p" placeholder="Degree percentage">
+        </div>
+
+        <div class="form-group">
+            <label for="degree_t1">Under Graduation(Degree type)- Field of degree education</label>
+            <select name="degree_t1">
+                <option value="Sci&Tech">Sci&Tech</option>
+                <option value="Comm&Mgmt">Comm&Mgmt</option>
+                <option value="Arts">Arts</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="workex1">Work Experience</label>
+            <select name="workex1">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="etest_p">Employability test percentage (conducted by college)</label>
+            <input type="text" name="etest_p" placeholder="in percentage">
+        </div>
+
+        <div class="form-group">
+            <label for="specialisation1">Specialization</label>
+            <select name="specialisation1">
+                <option value="Mkt&HR">Mkt&HR</option>
+                <option value="Mkt&Fin">Mkt&Fin</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mba_p">MBA Percentage</label>
+            <input type="text" name="mba_p" placeholder="In percentage">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trishit's Campus Placement Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="text-center">Trishit's Campus Placement Prediction</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <form action="/send" name="send_data" method="post">
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select name="gender" class="form-control">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ssc_p">Secondary Education Percentage - 10th Grade</label>
+          <input type="text" name="ssc_p" class="form-control" placeholder="10th grade in percentage">
+        </div>
+
+        <div class="form-group">
+          <label for="hsc_p">Higher Secondary Education Percentage - 12th Grade</label>
+          <input type="text" name="hsc_p" class="form-control" placeholder="12th Percentage">
+        </div>
+
+        <div class="form-group">
+          <label for="hsc_s1">Specialization in Higher Secondary Education</label>
+          <select name="hsc_s1" class="form-control">
+            <option value="Commerce">Commerce</option>
+            <option value="Science">Science</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="degree_p">Degree Percentage</label>
+          <input type="text" name="degree_p" class="form-control" placeholder="Degree percentage">
+        </div>
+
+        <div class="form-group">
+          <label for="degree_t1">Under Graduation(Degree type)- Field of degree education</label>
+          <select name="degree_t1" class="form-control">
+            <option value="Sci&Tech">Sci&Tech</option>
+            <option value="Comm&Mgmt">Comm&Mgmt</option>
+            <option value="Arts">Arts</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="workex1">Work Experience</label>
+          <select name="workex1" class="form-control">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="etest_p">Employability test percentage (conducted by college)</label>
+          <input type="text" name="etest_p" class="form-control" placeholder="in percentage">
+        </div>
+
+        <div class="form-group">
+          <label for="specialisation1">Specialization</label>
+          <select name="specialisation1" class="form-control">
+            <option value="Mkt&HR">Mkt&HR</option>
+            <option value="Mkt&Fin">Mkt&Fin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mba_p">MBA Percentage</label>
+          <input type="text" name="mba_p" class="form-control" placeholder="In percentage">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Placement Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 230px;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+}
+
+.form_wrapper {
+  flex:1;
+  text-align: center;
+}
+
+.selects{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; 
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <form action="/send", name="send_data", method="post">
+   
+      
+<div class="form-group">
+  <label for="gender">Gender</label>
+  <select name="gender" class = "selects" >
+    <option  value="M">Male</option>
+    <option value = "F">Female</option>
+  </select>
+</div>
+    
+    <label>Secondary Education Percentage - 10th Grade</label>
+    <input type="text"  name="ssc_p" placeholder="10th grade in percentage">
+
+
+    <label>Higher Secondary Education Percentage - 12th Grade</label>
+    <input type="text" name="hsc_p" placeholder="12th Percentage">
+
+
+    <div class="form-group">
+      <label for="hsc_s1">Specialization in Higher Secondary Education</label>
+      <select name="hsc_s1" class = "selects" >
+        <option  value="Commerce">Commerce</option>
+        <option value = "Science">Science</option>
+        <option value = "Others">Others</option>
+      </select>
+    </div>
+   
+    <label>Degree Percentage</label>
+    <input type="text" name="degree_p" placeholder="Degree percentage">
+
+    
+
+    <div class="form-group">
+      <label for="degree_t1">Under Graduation(Degree type)- Field of degree education</label>
+      <select name="degree_t1" class = "selects" >
+        <option  value="Sci&Tech">Sci&Tech</option>
+        <option value = "Comm&Mgmt">Comm&Mgmt</option>
+        <option value = "Arts">Arts</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="workex1">Work Experience</label>
+      <select name="workex1" class = "selects" >
+        <option  value="No">No</option>
+        <option value = "Yes">Yes</option>
+      </select>
+    </div>
+    
+    <label>Employability test percentage ( conducted by college)</label>
+    <input type="text" name="etest_p" placeholder="in percentage">
+
+    <div class="form-group">
+      <label for="specialisation1">Specialization</label>
+      <select name="specialisation1" class = "selects" >
+        <option  value="Mkt&HR">Mkt&HR</option>
+        <option value = "Mkt&Fin">Mkt&Fin</option>
+      </select>
+    </div>
+
+    <label>MBA Percentage</label>
+    <input type="text" name="mba_p" placeholder="In percentage">
+    
+
+    <div class="form_wrapper">
+       <input type="submit" value="Submit"/>
+    </div>
+
+  </form>
+
+
+</div>
+</body>
+</html> -->
